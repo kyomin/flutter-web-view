@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
+final homeUrl = Uri.parse('https://github.com/kyomin');
+
 class HomeScreen extends StatelessWidget {
   // Constructor
   HomeScreen({super.key});
 
   // Variables
-  WebViewController controller = WebViewController();
+  WebViewController controller = WebViewController()..loadRequest(homeUrl);
 
   @override
   Widget build(BuildContext context) {
