@@ -1,16 +1,38 @@
-# web_view
+# 개요
+웹뷰(WebView)를 사용해 현 깃허브 웹사이트를 띄워본다.
 
-A new Flutter project.
+# WebView
+웹뷰(WebView)는 `네이티브 앱에 내재되어 있는 웹 브라우저`이다.   
+웹뷰를 사용하면 웹 콘텐츠를 네이티브 앱 뷰와 같이 사용자에게 보여줄 수 있다.   
+일반 웹 브라우저와 달리 웹뷰에는 주소창, 새로고침, 즐겨찾기와 같은 기능은 없고 단순히 웹페이지만 보여준다.
 
-## Getting Started
+# 웹뷰의 장점
 
-This project is a starting point for a Flutter application.
+### 여러 플랫폼에서 사용할 수 있다
+웹페이지, Android 앱, iOS 앱을 모두 구현하려면 각 플랫폼에서 다른 언어로 개발해야 한다.   
+하지만 웹페이지 하나를 만들어놓고 Android, iOS에서 웹뷰를 사용하면 한 번만 개발해서 세 개의 플랫폼에 사용할 수 있다.   
+초기 개발 비용을 최소화하고 유지 보수도 더 편리하다.
 
-A few resources to get you started if this is your first Flutter project:
+### 배포 없이 업데이트 가능
+앱을 배포하려면 스토어 심사가 필요하다.   
+하지만 웹뷰를 사용하면 앱 심사를 하지 않아도 웹사이트 내용을 수정할 수 있다.   
+자주 바뀌거나 빠르게 업데이트가 필요한 화면은 웹뷰로 구현한다.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 인터넷 연결이 필요한 데이터를 간단히 불러온다
+이메일과 같은 데이터는 항상 인터넷 연결이 필요하다.   
+이러한 데이터는 네이티브 앱으로 네트워크를 설정하고, 데이터를 불러와서 앱 위에서 보여주는 것보다 항상 인터넷에 연결되어 있는 웹뷰로 보여주는 게 더 쉽다.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# 윕뷰의 단점
+
+### 비교적 느림
+네이티브 앱에 비해 로딩 시간이 느리다.   
+네이티브 앱은 이미 스토어에서 빌드가 완료되지만, 웹뷰는 해당 사이트에서 사용하는 리소스를 다운로드하고 보여주는 데 시간이 필요하다.   
+로딩 시간이 길어지면 사용자 경험에 안 좋은 영향을 끼친다.
+
+### UI가 제한적
+웹뷰는 HTML, CSS, JavaScript를 사용하기 때문에, 네이티브 앱의 UI를 구성하는 것보다 제약적이다.   
+각 플랫폼에서 제공하는 모든 UI 또는 UX를 웹뷰에서 사용하기 어렵다.
+
+### 스토어 심사가 어려울 수 있다
+웹뷰만으로 구성된 앱은 스토어 심사가 어려울 수 있다.   
+허가 없는 웹사이트를 무단으로 사용하거나, 웹 사이트만 보여주는 단순한 앱이 스토어에 등록되는 것을 방지하고 있기 때문이다.
