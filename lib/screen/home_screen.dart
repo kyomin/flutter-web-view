@@ -8,7 +8,9 @@ class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
   // Variables
-  WebViewController controller = WebViewController()..loadRequest(homeUrl);
+  WebViewController controller = WebViewController()
+    ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    ..loadRequest(homeUrl);
 
   @override
   Widget build(BuildContext context) {
